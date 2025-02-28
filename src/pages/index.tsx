@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 // Components will be created next
 import Hero from '../components/Hero';
@@ -57,6 +58,12 @@ export default function Home() {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-6">
                   <a href="#learn" className="text-sm font-medium hover:text-[#00ff94] transition-colors">Learn</a>
+                  <Link 
+                    href="/dashboard" 
+                    className="text-sm font-medium hover:text-[#00ff94] transition-colors"
+                  >
+                    Dashboard
+                  </Link>
                   <a href="#vip" className="text-sm font-medium hover:text-[#00ff94] transition-colors">VIP</a>
                   <a className="btn btn-sm bg-[#00ff94] hover:bg-[#00ff94]/80 text-black border-none">Login</a>
                 </div>
@@ -92,6 +99,13 @@ export default function Home() {
                   </label>
                 </div>
                 <a href="#learn" className="btn btn-ghost justify-start text-lg hover:text-[#00ff94]" onClick={() => setIsDrawerOpen(false)}>Learn</a>
+                <Link 
+                  href="/dashboard" 
+                  className="btn btn-ghost justify-start text-lg hover:text-[#00ff94]" 
+                  onClick={() => setIsDrawerOpen(false)}
+                >
+                  Dashboard
+                </Link>
                 <a href="#vip" className="btn btn-ghost justify-start text-lg hover:text-[#00ff94]" onClick={() => setIsDrawerOpen(false)}>VIP</a>
               </div>
             </div>
